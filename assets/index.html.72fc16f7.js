@@ -1,0 +1,1 @@
+const e={key:"v-6b7adb49",path:"/net/manual/operate/",title:"\u64CD\u4F5C\u624B\u518C",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u76EE\u5F55",slug:"\u76EE\u5F55",children:[]}],git:{updatedTime:1653302546e3,contributors:[{name:"Yue-plus",email:"Yue_plus@foxmail.com",commits:1}]},filePathRelative:"net/manual/operate/README.md"};export{e as data};

@@ -1,0 +1,1 @@
+const e={key:"v-01e7faf0",path:"/serve/CentOS/Pacemaker/",title:"Pacemaker \u96C6\u7FA4\u7BA1\u7406",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653302546e3,contributors:[{name:"Yue-plus",email:"Yue_plus@foxmail.com",commits:1}]},filePathRelative:"serve/CentOS/Pacemaker/README.md"};export{e as data};

@@ -1,0 +1,59 @@
+import{_ as r,r as p,o,c as t,a as s,b as e,F as l,d as n,e as c}from"./app.bef272a2.js";const i={},b=s("h1",{id:"chrony-\u65F6\u95F4\u540C\u6B65",tabindex:"-1"},[s("a",{class:"header-anchor",href:"#chrony-\u65F6\u95F4\u540C\u6B65","aria-hidden":"true"},"#"),n(" Chrony\uFF08\u65F6\u95F4\u540C\u6B65\uFF09")],-1),u={class:"custom-container tip"},d=s("p",{class:"custom-container-title"},"TIP",-1),m=s("p",null,"chrony \u662F\u7F51\u7EDC\u65F6\u95F4\u534F\u8BAE\uFF08NTP\uFF09\u7684\u901A\u7528\u5B9E\u73B0\u3002",-1),h={href:"https://chrony.tuxfamily.org/comparison.html",target:"_blank",rel:"noopener noreferrer"},k=n("\u4E0E\u5176\u4ED6 NTP \u5B9E\u73B0\u6BD4\u8F83"),f=s("p",null,"chrony \u5305\u542B\u4E24\u4E2A\u7A0B\u5E8F\uFF1A",-1),g=s("ul",null,[s("li",null,"chronyd \u662F\u4E00\u4E2A\u53EF\u4EE5\u5728\u542F\u52A8\u65F6\u542F\u52A8\u7684\u5B88\u62A4\u7A0B\u5E8F\u3002"),s("li",null,"chronyc \u662F\u4E00\u4E2A\u547D\u4EE4\u884C\u754C\u9762\u7A0B\u5E8F\uFF0C\u7528\u4E8E\u76D1\u89C6 chronyd \u7684\u6027\u80FD\u5E76\u5728\u8FD0\u884C\u65F6\u66F4\u6539\u5404\u79CD\u64CD\u4F5C\u53C2\u6570\u3002")],-1),_=c(`<h2 id="\u5B89\u88C5" tabindex="-1"><a class="header-anchor" href="#\u5B89\u88C5" aria-hidden="true">#</a> \u5B89\u88C5</h2><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> yum <span class="token function">install</span> chrony
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><h2 id="\u914D\u7F6E" tabindex="-1"><a class="header-anchor" href="#\u914D\u7F6E" aria-hidden="true">#</a> \u914D\u7F6E</h2><p>\u5728 CentOS \u4E2D\u914D\u7F6E\u6587\u4EF6\u5728 <code>/etc/chrony.conf</code>\uFF1A</p><div class="language-conf ext-conf line-numbers-mode"><pre class="language-conf"><code># Use public servers from the pool.ntp.org project.
+# Please consider joining the pool (http://www.pool.ntp.org/join.html).
+server 0.centos.pool.ntp.org iburst
+server 1.centos.pool.ntp.org iburst
+server 2.centos.pool.ntp.org iburst
+server 3.centos.pool.ntp.org iburst
+
+# Record the rate at which the system clock gains/losses time.
+driftfile /var/lib/chrony/drift
+
+# Allow the system clock to be stepped in the first three updates
+# if its offset is larger than 1 second.
+makestep 1.0 3
+
+# Enable kernel synchronization of the real-time clock (RTC).
+rtcsync
+
+# Enable hardware timestamping on all interfaces that support it.
+#hwtimestamp *
+
+# Increase the minimum number of selectable sources required to adjust
+# the system clock.
+#minsources 2
+
+# Allow NTP client access from local network.
+#allow 192.168.0.0/16
+
+# Serve time even if not synchronized to a time source.
+#local stratum 10
+
+# Specify file containing keys for NTP authentication.
+#keyfile /etc/chrony.keys
+
+# Specify directory for log files.
+logdir /var/log/chrony
+
+# Select which information is logged.
+#log measurements statistics tracking
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h2 id="\u793A\u4F8B" tabindex="-1"><a class="header-anchor" href="#\u793A\u4F8B" aria-hidden="true">#</a> \u793A\u4F8B</h2><h3 id="\u8BBE\u7F6E-chrony-\u670D\u52A1\u5668" tabindex="-1"><a class="header-anchor" href="#\u8BBE\u7F6E-chrony-\u670D\u52A1\u5668" aria-hidden="true">#</a> \u8BBE\u7F6E Chrony \u670D\u52A1\u5668</h3><p>\u4FEE\u6539 <code>/etc/chrony.conf</code> \u6587\u4EF6\uFF1A</p><div class="language-diff ext-diff line-numbers-mode"><pre class="language-diff"><code><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> server 0.centos.pool.ntp.org iburst
+</span><span class="token prefix deleted">-</span><span class="token line"> server 1.centos.pool.ntp.org iburst
+</span><span class="token prefix deleted">-</span><span class="token line"> server 2.centos.pool.ntp.org iburst
+</span><span class="token prefix deleted">-</span><span class="token line"> server 3.centos.pool.ntp.org iburst
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> server &lt;\u672C\u673A IP / \u57DF\u540D&gt; iburst
+</span></span></code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="\u67E5\u770B\u65F6\u95F4\u540C\u6E90\u72B6\u6001" tabindex="-1"><a class="header-anchor" href="#\u67E5\u770B\u65F6\u95F4\u540C\u6E90\u72B6\u6001" aria-hidden="true">#</a> \u67E5\u770B\u65F6\u95F4\u540C\u6E90\u72B6\u6001</h3><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code><span class="token punctuation">[</span>root@host-10-20-70-107 ~<span class="token punctuation">]</span><span class="token comment"># chronyc sourcestats -v</span>
+<span class="token number">210</span> Number of sources <span class="token operator">=</span> <span class="token number">1</span>
+                             .- Number of sample points <span class="token keyword">in</span> measurement set.
+                            /    .- Number of residual runs with same sign.
+                           <span class="token operator">|</span>    /    .- Length of measurement <span class="token builtin class-name">set</span> <span class="token punctuation">(</span>time<span class="token punctuation">)</span>.
+                           <span class="token operator">|</span>   <span class="token operator">|</span>    /      .- Est. clock freq error <span class="token punctuation">(</span>ppm<span class="token punctuation">)</span>.
+                           <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token operator">|</span>      /           .- Est. error <span class="token keyword">in</span> freq.
+                           <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token operator">|</span>     <span class="token operator">|</span>           /         .- Est. offset.
+                           <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token operator">|</span>     <span class="token operator">|</span>          <span class="token operator">|</span>          <span class="token operator">|</span>   On the -.
+                           <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token operator">|</span>     <span class="token operator">|</span>          <span class="token operator">|</span>          <span class="token operator">|</span>   samples. <span class="token punctuation">\\</span>
+                           <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token operator">|</span>     <span class="token operator">|</span>          <span class="token operator">|</span>          <span class="token operator">|</span>             <span class="token operator">|</span>
+Name/IP Address            NP  NR  Span  Frequency  Freq Skew  Offset  Std Dev
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+host-10-20-70-107.openst<span class="token operator">&gt;</span>   <span class="token number">0</span>   <span class="token number">0</span>     <span class="token number">0</span>     +0.000   <span class="token number">2000.000</span>     +0ns  4000ms
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="\u53C2\u8003\u94FE\u63A5" tabindex="-1"><a class="header-anchor" href="#\u53C2\u8003\u94FE\u63A5" aria-hidden="true">#</a> \u53C2\u8003\u94FE\u63A5</h2>`,12),v={href:"https://www.cnblogs.com/jhxxb/p/11526098.html",target:"_blank",rel:"noopener noreferrer"},y=n("Linux \u65F6\u95F4\u540C\u6B65 Chrony - \u6C5F\u6E56\u5C0F\u5C0F\u767D - \u535A\u5BA2\u56ED"),x={href:"http://linux.vbird.org/linux_server/0440ntp.php",target:"_blank",rel:"noopener noreferrer"},w=n("\u7B2C\u5341\u4E94\u7AE0\u3001\u6642\u9593\u4F3A\u670D\u5668\uFF1A NTP \u4F3A\u670D\u5668 - \u9CE5\u54E5\u7684 Linux \u79C1\u623F\u83DC");function N(P,S){const a=p("ExternalLinkIcon");return o(),t(l,null,[b,s("div",u,[d,m,s("blockquote",null,[s("p",null,[s("a",h,[k,e(a)])])]),f,g]),_,s("ul",null,[s("li",null,[s("a",v,[y,e(a)])]),s("li",null,[s("a",x,[w,e(a)])])])],64)}var T=r(i,[["render",N],["__file","index.html.vue"]]);export{T as default};

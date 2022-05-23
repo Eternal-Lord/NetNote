@@ -1,0 +1,1 @@
+const e={key:"v-3d00b1ce",path:"/serve/WS/DHCP.html",title:"DHCP",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653302546e3,contributors:[{name:"Yue-plus",email:"Yue_plus@foxmail.com",commits:1}]},filePathRelative:"serve/WS/DHCP.md"};export{e as data};

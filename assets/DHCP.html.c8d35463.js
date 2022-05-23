@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,a as c,d as o}from"./app.bef272a2.js";const s={},_={id:"dhcp",tabindex:"-1"},r=c("a",{class:"header-anchor",href:"#dhcp","aria-hidden":"true"},"#",-1),d=o(" DHCP"),n=[r,d];function h(i,f){return t(),a("h1",_,n)}var m=e(s,[["render",h],["__file","DHCP.html.vue"]]);export{m as default};

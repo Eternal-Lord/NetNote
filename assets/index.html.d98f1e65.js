@@ -1,0 +1,1 @@
+const e={key:"v-7b8486e1",path:"/serve/CentOS/NIS/",title:"NIS\uFF08\u7F51\u7EDC\u4FE1\u606F\u670D\u52A1\uFF09",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653302546e3,contributors:[{name:"Yue-plus",email:"Yue_plus@foxmail.com",commits:1}]},filePathRelative:"serve/CentOS/NIS/README.md"};export{e as data};

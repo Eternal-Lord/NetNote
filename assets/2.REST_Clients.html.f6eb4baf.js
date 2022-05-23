@@ -1,0 +1,1 @@
+const e={key:"v-6c16aaa9",path:"/coding/Spring/Framework/WebServlet/2.REST_Clients.html",title:"2. REST \u5BA2\u6237\u7AEF",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653302546e3,contributors:[{name:"Yue-plus",email:"Yue_plus@foxmail.com",commits:1}]},filePathRelative:"coding/Spring/Framework/WebServlet/2.REST_Clients.md"};export{e as data};

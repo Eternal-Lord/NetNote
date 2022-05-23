@@ -1,0 +1,1 @@
+const e={key:"v-2c5b5539",path:"/serve/VM/Hyper-V/",title:"Hyper-V",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653302546e3,contributors:[{name:"Yue-plus",email:"Yue_plus@foxmail.com",commits:1}]},filePathRelative:"serve/VM/Hyper-V/README.md"};export{e as data};

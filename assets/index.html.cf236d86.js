@@ -1,0 +1,1 @@
+const e={key:"v-7b847b9e",path:"/serve/CentOS/NFS/",title:"NFS\uFF08\u7F51\u7EDC\u6587\u4EF6\u7CFB\u7EDF\uFF09",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1653302546e3,contributors:[{name:"Yue-plus",email:"Yue_plus@foxmail.com",commits:1}]},filePathRelative:"serve/CentOS/NFS/README.md"};export{e as data};

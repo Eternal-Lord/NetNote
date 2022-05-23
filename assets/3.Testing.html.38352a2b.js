@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as _,a as s,d as a}from"./app.bef272a2.js";const o={},c={id:"_3-\u6D4B\u8BD5",tabindex:"-1"},r=s("a",{class:"header-anchor",href:"#_3-\u6D4B\u8BD5","aria-hidden":"true"},"#",-1),n=a(" 3. \u6D4B\u8BD5"),d=[r,n];function i(h,f){return t(),_("h1",c,d)}var m=e(o,[["render",i],["__file","3.Testing.html.vue"]]);export{m as default};
